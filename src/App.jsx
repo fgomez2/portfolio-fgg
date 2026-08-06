@@ -9,6 +9,9 @@ function App() {
 
   return (
     <>
+      <h1 class="text-3xl bg-green-500 font-bold underline">
+        Prueba funcionando Tailwind
+      </h1>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
