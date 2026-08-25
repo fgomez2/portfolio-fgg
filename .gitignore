@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Directorio de Claude
+.claude/*
+CLAUDE.md
