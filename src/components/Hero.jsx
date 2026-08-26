@@ -2,7 +2,7 @@ export default function Hero() {
     return (
         <section
             id="inicio"
-            className="relative flex min-h-svh flex-col justify-end overflow-hidden pb-32 md:justify-center md:pb-0"
+            className="relative flex min-h-svh flex-col overflow-hidden pt-[calc(env(safe-area-inset-top)+112px)] md:justify-center md:pt-0"
         >
             {/* neón detrás de la barra */}
             <div

@@ -8,11 +8,11 @@ import {
 } from './icons'
 
 const links = [
-    { id: 'inicio', n: '01', label: 'Inicio' },
-    { id: 'sobre-mi', n: '02', label: 'Sobre mí' },
-    { id: 'proyectos', n: '03', label: 'Proyectos' },
-    { id: 'tecnologias', n: '04', label: 'Tecnologías' },
-    { id: 'contacto', n: '05', label: 'Contacto' },
+    { id: 'inicio', label: 'Inicio' },
+    { id: 'sobre-mi', n: '01', label: 'Sobre mí' },
+    { id: 'proyectos', n: '02', label: 'Proyectos' },
+    { id: 'tecnologias', n: '03', label: 'Tecnologías' },
+    { id: 'contacto', n: '04', label: 'Contacto' },
 ]
 
 const redesSociales = [
@@ -162,15 +162,6 @@ export default function Header() {
                     aria-hidden="true"
                     className="mx-auto mb-4 block h-1 w-10 rounded-full bg-white/16"
                 />
-
-                <div className="flex items-center justify-between px-1 pb-2.5">
-                    <span className="font-mono text-[10px] tracking-[0.18em] text-neutral-500 uppercase">
-                        Navegación
-                    </span>
-                    <span className="font-mono text-[10px] tracking-[0.18em] text-neutral-700">
-                        {String(links.length).padStart(2, '0')}
-                    </span>
-                </div>
 
                 <ul className="flex flex-col">
                     {links.map(({ id, n, label }) => (
