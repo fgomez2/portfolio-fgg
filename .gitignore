@@ -26,3 +26,8 @@ dist-ssr
 # Directorio de Claude
 .claude/*
 CLAUDE.md
+skills-lock.json
+.mcp.json
+
+#Playwright
+.playwright-mcp
