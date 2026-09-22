@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" color="#000">
+    <title>fgg</title>
+    <!-- Letras negras por defecto y blancas si el navegador va en tema oscuro -->
+    <style>
+        @media (prefers-color-scheme: dark) {
+            svg { color: #fff }
+        }
+    </style>
+    <defs>
+        <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
+            <feGaussianBlur stdDeviation="2.6" result="b" />
+            <feMerge><feMergeNode in="b" /><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+    </defs>
+    <text x="26.2" y="44" font-family="Sora, Segoe UI, system-ui, sans-serif" font-size="30" font-weight="700" letter-spacing="-1.5" text-anchor="middle" fill="currentColor">fgg</text>
+    <circle cx="55.8" cy="40" r="4" fill="#22d3ee" filter="url(#glow)" />
+</svg>

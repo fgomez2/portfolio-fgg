@@ -26,9 +26,52 @@
     <meta name="twitter:title" content="Fer Gómez · Desarrollador Full Stack" />
     <meta name="twitter:description" content="Portfolio Fer Gómez, desarrollador Full Stack Junior." />
     <meta name="twitter:image" content="%VITE_SITE_URL%/og.jpg" />
+
+    <!-- Datos estructurados: AUTOR (yo) y mis perfiles -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "%VITE_SITE_URL%/#fer",
+            "name": "Fernando Gómez García",
+            "alternateName": "Fer Gómez",
+            "url": "%VITE_SITE_URL%/",
+            "image": "%VITE_SITE_URL%/og.jpg",
+            "jobTitle": "Desarrollador Full Stack Junior",
+            "sameAs": [
+              "https://github.com/fgomez2",
+              "https://www.linkedin.com/in/fernando-g%C3%B3mez-garc%C3%ADa-50562735a"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "%VITE_SITE_URL%/#web",
+            "url": "%VITE_SITE_URL%/",
+            "name": "Fer Gómez · Portfolio",
+            "inLanguage": "es",
+            "about": { "@id": "%VITE_SITE_URL%/#fer" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Contenido minimo para quien navegue sin Javascript -->
+    <noscript>
+      <div style="max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem; font-family: system-ui, sans-serif; color: #e5e5e5">
+        <h1>Fer Gómez</h1>
+        <p>Desarrollador Full Stack Junior.</p>
+        <p>Esta web necesita JavaScript para mostrarse completa. Mientras tanto, puedes verme en:</p>
+        <ul>
+          <li><a href="https://github.com/fgomez2" style="color: #22d3ee">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/fernando-g%C3%B3mez-garc%C3%ADa-50562735a" style="color: #22d3ee">LinkedIn</a></li>
+        </ul>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
