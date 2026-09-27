@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react'
-import {
-    FlechaDerechaIcono,
-    FlechaDerechaPequenaIcono,
-    GitHubIcono,
-    LinkedInIcono,
-    CorreoIcono,
-} from './icons'
+import { FlechaDerechaIcono, FlechaDerechaPequenaIcono } from './icons'
+import { redesSociales } from '../redes'
 
 const links = [
     { id: 'inicio', label: 'Inicio' },
@@ -13,12 +8,6 @@ const links = [
     { id: 'proyectos', n: '02', label: 'Proyectos' },
     { id: 'tecnologias', n: '03', label: 'Tecnologías' },
     { id: 'contacto', n: '04', label: 'Contacto' },
-]
-
-const redesSociales = [
-    { label: 'GitHub', href: '#', Icon: GitHubIcono },
-    { label: 'LinkedIn', href: '#', Icon: LinkedInIcono },
-    { label: 'Correo', href: '#contacto', Icon: CorreoIcono },
 ]
 
 export default function Header() {

@@ -37,7 +37,7 @@ export default function Hero() {
 
                 <img
                     src={fotoPerfil}
-                    alt="@fgomez2 en Github"
+                    alt="Fer Gómez, Desarrollador Full Stack"
                     className="mt-8 mx-auto md:mx-0 h-[132px] w-[132px] shrink-0 rounded-full border border-cyan-400/30 object-cover object-[center_12%] shadow-[0_0_34px_-12px_rgb(34_211_238)] md:mt-0 md:mr-[10%] md:h-[280px] md:w-[280px] md:shadow-[0_0_70px_-20px_rgb(34_211_238)]"
                 />
             </div>
