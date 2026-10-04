@@ -50,7 +50,7 @@ export default function DetalleProyecto() {
                             alt={`Vista previa de ${titulo}`}
                             width="1200"
                             height="675"
-                            className="mt-10 aspect-video w-full max-w-[880px] rounded-2xl border border-white/10 object-cover md:mt-12"
+                            className="mt-10 aspect-video w-full max-w-[880px] rounded-2xl border border-white/10 bg-black object-contain md:mt-12"
                         />
 
                         {descripcion.map((parrafo) => (

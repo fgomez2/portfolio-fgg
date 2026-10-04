@@ -8,7 +8,7 @@ export const proyectos = [
     {
         slug: 'kickradar',
         titulo: 'kickRadar',
-        imagen: '/proyecto-generico.svg',
+        imagen: '/kickradar-proyecto.svg',
         repositorio: 'https://github.com/fgomez2/kickRadar',
         resumen: 'Pendiente: una frase con qué es el proyecto y para quién.',
         descripcion: [

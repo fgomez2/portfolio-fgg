@@ -18,7 +18,7 @@ export default function TarjetaProyecto({ slug, titulo, imagen, repositorio }) {
                 width="1200"
                 height="675"
                 loading="lazy"
-                className="mt-5 aspect-video w-full rounded-xl border border-white/8 object-cover"
+                className="mt-5 aspect-video w-full rounded-xl border border-white/8 bg-black object-contain"
             />
 
             <div className="mt-6 flex items-center justify-center gap-4">
