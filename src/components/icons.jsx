@@ -15,6 +15,15 @@ export function FlechaDerechaIcono({ className = 'h-4 w-4' }) {
     )
 }
 
+export function FlechaIzquierdaIcono({ className = 'h-4 w-4' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.6" className={className} aria-hidden="true">
+            <path d="M19 12H5" />
+            <path d="m12 19-7-7 7-7" />
+        </svg>
+    )
+}
+
 export function FlechaDerechaPequenaIcono({ className = 'h-4 w-4' }) {
     return (
         <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
