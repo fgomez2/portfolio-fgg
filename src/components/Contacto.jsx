@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
 import CabeceraSeccion from './CabeceraSeccion'
+import { redesSociales } from '../redes'
 import { CheckIcono, CopiarIcono, DescargarIcono } from './icons'
 
 const CORREO = 'fgomezdev2@gmail.com'
 // TODO: dejar el PDF en public/ con este nombre, o el botón dará un 404.
 const CV = '/cv-fernando-gomez.pdf'
+
+const perfiles = redesSociales.filter(({ href }) => href.startsWith('http'))
 
 export default function Contacto() {
     const [copiado, setCopiado] = useState(false)
@@ -34,7 +37,7 @@ export default function Contacto() {
             />
 
             <div className="relative mx-auto w-full max-w-6xl px-6">
-                <CabeceraSeccion numero="04" titulo="Contacto" />
+                <CabeceraSeccion numero="05" titulo="Contacto" />
 
                 <p className="font-display mt-6 max-w-[560px] text-[15px] leading-relaxed text-neutral-300 text-pretty md:mt-8 md:text-[19px]">
                     Busco prácticas como desarrollador Full Stack. Si tienes una
@@ -70,6 +73,20 @@ export default function Contacto() {
                         Descargar CV
                     </a>
                 </div>
+
+                <p className="font-display mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px] text-neutral-400 md:mt-7 md:text-[17px]">
+                    {perfiles.map(({ label, href, usuario }) => (
+                        <a
+                            key={label}
+                            href={href}
+                            target="_blank"
+                            rel="noopener"
+                            className="underline decoration-white/20 underline-offset-4 transition-colors hover:text-cyan-400 hover:decoration-cyan-400/60 focus-visible:text-cyan-400 focus-visible:decoration-cyan-400/60"
+                        >
+                            {usuario ? `${label} ${usuario}` : label}
+                        </a>
+                    ))}
+                </p>
 
                 <p className="font-display mt-10 flex items-center gap-2.5 text-[15px] text-neutral-400 md:mt-12 md:text-[17px]">
                     <span

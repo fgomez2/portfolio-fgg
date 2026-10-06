@@ -6,7 +6,7 @@ export default function SobreMi() {
             <div className="mx-auto w-full max-w-6xl px-6">
                 <CabeceraSeccion numero="01" titulo="Sobre mí" />
 
-                {/* BORRADOR — reescribir con tus palabras antes de publicar */}
+                {/* BORRADOR */}
                 <p className="font-display mt-6 max-w-[560px] text-[15px] leading-relaxed text-neutral-300 text-pretty md:mt-8 md:text-[19px]">
                     Soy Fernando Gómez, desarrollador Full Stack Junior... (EJEMPLO)
                 </p>
@@ -17,7 +17,7 @@ export default function SobreMi() {
                     portátil, que se pueda navegar con el teclado y que cargue
                     rápido. (EJEMPLOO)
                 </p>
-                {/* TODO: párrafo de la formación, donde soy y que busco */}
+                {/* TODO: párrafo de dónde soy y qué busco. */}
             </div>
         </section>
     )

@@ -5,9 +5,10 @@ import { redesSociales } from '../redes'
 const links = [
     { id: 'inicio', label: 'Inicio' },
     { id: 'sobre-mi', n: '01', label: 'Sobre mí' },
-    { id: 'proyectos', n: '02', label: 'Proyectos' },
-    { id: 'tecnologias', n: '03', label: 'Tecnologías' },
-    { id: 'contacto', n: '04', label: 'Contacto' },
+    { id: 'formacion', n: '02', label: 'Formación' },
+    { id: 'proyectos', n: '03', label: 'Proyectos' },
+    { id: 'tecnologias', n: '04', label: 'Tecnologías' },
+    { id: 'contacto', n: '05', label: 'Contacto' },
 ]
 
 export default function Header() {
