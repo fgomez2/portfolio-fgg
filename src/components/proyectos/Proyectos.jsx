@@ -8,7 +8,7 @@ export default function Proyectos() {
             <div className="mx-auto w-full max-w-6xl px-6">
                 <CabeceraSeccion numero="03" titulo="Proyectos" />
 
-                <div className="mt-10 grid gap-6 md:mt-14 md:grid-cols-2 md:gap-8">
+                <div className="mt-10 grid gap-8 px-5 md:mt-14 md:grid-cols-2 md:px-0">
                     {proyectos.map((proyecto) => (
                         <TarjetaProyecto key={proyecto.slug} {...proyecto} />
                     ))}
