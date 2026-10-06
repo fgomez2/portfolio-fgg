@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import CabeceraSeccion from './CabeceraSeccion'
 import { CheckIcono, CopiarIcono, DescargarIcono } from './icons'
 
-const CORREO = 'fergg424@gmail.com'
+const CORREO = 'fgomezdev2@gmail.com'
 // TODO: dejar el PDF en public/ con este nombre, o el botón dará un 404.
 const CV = '/cv-fernando-gomez.pdf'
 

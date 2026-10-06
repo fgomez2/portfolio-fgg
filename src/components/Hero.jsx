@@ -22,7 +22,7 @@ export default function Hero() {
                     </div>
 
                     <h1 className="mt-[18px] font-display text-[44px] leading-[1.05] font-semibold tracking-[-0.035em] text-white md:mt-6 md:text-[92px] md:leading-none md:tracking-[-0.04em]">
-                        Fer{' '}
+                        Fernando{' '}
                         <br className="md:hidden" />
                         Gómez
                     </h1>
