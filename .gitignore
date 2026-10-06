@@ -31,3 +31,6 @@ skills-lock.json
 
 #Playwright
 .playwright-mcp
+
+# Imágenes que no quiero que se suban
+.dontUpload

@@ -2,8 +2,7 @@
 // portada y la página de detalle de cada uno (/proyectos/:slug).
 // El slug es la parte de la URL, así que va en minúsculas y sin acentos.
 
-// TODO: escribir resumen, descripción y tecnologías de cada proyecto,
-// y sustituir la imagen genérica por una captura real.
+// TODO: escribir resumen, descripción y tecnologías de cada proyecto
 export const proyectos = [
     {
         slug: 'kickradar',
@@ -19,7 +18,7 @@ export const proyectos = [
     {
         slug: 'autoimport-hub',
         titulo: 'autoimport-hub',
-        imagen: '/proyecto-generico.svg',
+        imagen: '/autoimport-hub-proyecto.webp',
         repositorio: 'https://github.com/fgomez2/autoimport-hub',
         resumen: 'Pendiente: una frase con qué es el proyecto y para quién.',
         descripcion: [
