@@ -86,3 +86,45 @@ export function DescargarIcono({ className = 'h-4 w-4' }) {
         </svg>
     )
 }
+
+// Iconos de tecnologías
+export function ReactIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.4" className={className} aria-hidden="true">
+            <circle cx="12" cy="12" r="2" />
+            <ellipse cx="12" cy="12" rx="10" ry="4.2" />
+            <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)" />
+            <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)" />
+        </svg>
+    )
+}
+
+export function SupabaseIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <path d="M13.5 2 4 13.5h6.5V22L20 10.5h-6.5z" />
+        </svg>
+    )
+}
+
+// Genérico para API
+export function ApiIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <path d="M12 22v-5" />
+            <path d="M9 8V2" />
+            <path d="M15 8V2" />
+            <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8z" />
+        </svg>
+    )
+}
+
+export function WebIcono({ className = 'h-4 w-4' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.6" className={className} aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </svg>
+    )
+}

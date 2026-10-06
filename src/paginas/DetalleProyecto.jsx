@@ -2,8 +2,9 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router'
 import HeaderProyectos from '../components/HeaderProyectos'
 import FondoRejilla from '../components/FondoRejilla'
+import TecnologiasProyecto from '../components/proyectos/TecnologiasProyecto'
 import Footer from '../components/Footer'
-import { GitHubIcono } from '../components/icons'
+import { GitHubIcono, WebIcono } from '../components/icons'
 import { buscarProyecto } from '../datos/proyectos'
 
 // El mismo <title> que index.html, para restaurarlo al salir de la página
@@ -22,7 +23,7 @@ export default function DetalleProyecto() {
         }
     }, [proyecto])
 
-    const { titulo, imagen, repositorio, resumen, descripcion, tecnologias } = proyecto
+    const { titulo, imagen, repositorio, web, resumen, descripcion, tecnologias } = proyecto
 
     return (
         <>
@@ -62,28 +63,36 @@ export default function DetalleProyecto() {
                             </p>
                         ))}
 
-                        {tecnologias.length > 0 && (
-                            <ul className="mt-8 flex flex-wrap gap-2.5">
-                                {tecnologias.map((tecnologia) => (
-                                    <li
-                                        key={tecnologia}
-                                        className="font-mono rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-[11px] tracking-[0.12em] text-neutral-300 uppercase"
-                                    >
-                                        {tecnologia}
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
+                        <TecnologiasProyecto tecnologias={tecnologias} />
 
-                        <a
-                            href={repositorio}
-                            target="_blank"
-                            rel="noopener"
-                            className="font-heading mt-10 inline-flex h-12 items-center gap-2.5 rounded-full border border-cyan-400/55 bg-cyan-400/8 px-6 text-sm font-medium text-cyan-400 transition-all duration-300 hover:bg-cyan-400/14 hover:shadow-[0_0_28px_-8px_rgb(34_211_238)]"
-                        >
-                            <GitHubIcono className="h-[17px] w-[17px]" />
-                            Ver el código en GitHub
-                        </a>
+                        <div className="mt-10 flex flex-wrap items-center gap-3">
+                            {/* Solo los proyectos desplegados traen `web` */}
+                            {web && (
+                                <a
+                                    href={web}
+                                    target="_blank"
+                                    rel="noopener"
+                                    className="font-heading inline-flex h-12 items-center gap-2.5 rounded-full border border-cyan-400/55 bg-cyan-400/8 px-6 text-sm font-medium text-cyan-400 transition-all duration-300 hover:bg-cyan-400/14 hover:shadow-[0_0_28px_-8px_rgb(34_211_238)]"
+                                >
+                                    <WebIcono className="h-[17px] w-[17px]" />
+                                    Ver la web
+                                </a>
+                            )}
+
+                            <a
+                                href={repositorio}
+                                target="_blank"
+                                rel="noopener"
+                                className={`font-heading inline-flex h-12 items-center gap-2.5 rounded-full px-6 text-sm font-medium transition-all duration-300 ${
+                                    web
+                                        ? 'border border-white/12 bg-white/5 text-neutral-300 hover:border-cyan-400/60 hover:text-cyan-400'
+                                        : 'border border-cyan-400/55 bg-cyan-400/8 text-cyan-400 hover:bg-cyan-400/14 hover:shadow-[0_0_28px_-8px_rgb(34_211_238)]'
+                                }`}
+                            >
+                                <GitHubIcono className="h-[17px] w-[17px]" />
+                                Ver el código en GitHub
+                            </a>
+                        </div>
                     </article>
                 </FondoRejilla>
             </main>
