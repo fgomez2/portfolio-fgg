@@ -7,14 +7,14 @@ const ciclos = [
     {
         titulo: 'Desarrollo de Aplicaciones Multiplataforma',
         nivel: 'CFGS',
-        descripcion: 'Aplicaciones de escritorio y móvil, con sus bases de datos y servicios.',
+        descripcion: 'Aplicaciones de escritorio (Java, JavaFX) y móvil (Android, Kotlin), con sus bases de datos y servicios.',
         periodo: 'Cursando, termino en 2027',
         enCurso: true,
     },
     {
         titulo: 'Desarrollo de Aplicaciones Web',
         nivel: 'CFGS',
-        descripcion: 'Desarrollo web de principio a fin: interfaz, servidor, base de datos y despliegue.',
+        descripcion: 'Desarrollo web de principio a fin: interfaz (HTML, CSS, JavaScript), servidor (PHP, Node.js), base de datos (SQL, MySQL, MongoDB) y despliegue.',
         periodo: '2023 – 2025',
     },
     {
@@ -33,49 +33,54 @@ export default function Formacion() {
             <div className="mx-auto w-full max-w-6xl px-6">
                 <CabeceraSeccion numero="02" titulo="Formación" />
 
-                <ol className="relative mt-10 max-w-[560px] md:mt-14">
+                <ol className="relative mt-10 max-w-[560px] md:mt-14 md:max-w-[740px]">
                     {/* hilo de la cronología */}
                     <span
                         aria-hidden="true"
-                        className="pointer-events-none absolute top-2.5 bottom-2.5 left-[3px] w-px bg-gradient-to-b from-cyan-400/50 via-white/12 to-transparent"
+                        className="pointer-events-none absolute top-2.5 bottom-2.5 left-[3px] w-px bg-gradient-to-b from-cyan-400/50 via-white/12 to-transparent md:left-[145px]"
                     />
 
                     {ciclos.map(({ titulo, nivel, descripcion, periodo, enCurso }) => (
-                        <li key={titulo} className="relative pb-9 pl-7 last:pb-0 md:pb-11 md:pl-9">
-                            <span
-                                aria-hidden="true"
-                                className={`absolute top-2 left-0 block h-[7px] w-[7px] rounded-full ${
-                                    enCurso
-                                        ? 'bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)]'
-                                        : 'bg-neutral-700'
-                                }`}
-                            />
-
-                            <h3 className="font-heading text-[17px] font-semibold tracking-tight text-white md:text-[21px]">
-                                {titulo}
-                            </h3>
-
-                            <p className="font-display mt-1.5 text-[15px] leading-relaxed text-neutral-400 md:text-[17px]">
-                                {nivel} en el {CENTRO}
-                            </p>
-
-                            <p className="font-display mt-1 text-[15px] leading-relaxed text-neutral-500 text-pretty md:text-[17px]">
-                                {descripcion}
-                            </p>
-
+                        <li
+                            key={titulo}
+                            className="grid gap-x-8 pb-9 last:pb-0 md:grid-cols-[110px_1fr] md:pb-10"
+                        >
                             <p
-                                className={`mt-3 font-mono text-[12px] tracking-[0.18em] uppercase md:text-[14px] md:tracking-[0.22em] ${
+                                className={`order-last mt-3 font-mono text-[12px] tracking-[0.18em] uppercase md:order-first md:mt-0 md:pt-[5px] md:text-[13px] md:leading-[1.5] md:tracking-[0.14em] ${
                                     enCurso ? 'text-cyan-400' : 'text-neutral-500'
                                 }`}
                             >
                                 {periodo}
                             </p>
+
+                            <div className="relative pl-7">
+                                <span
+                                    aria-hidden="true"
+                                    className={`absolute top-2 left-0 block h-[7px] w-[7px] rounded-full ${
+                                        enCurso
+                                            ? 'bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)]'
+                                            : 'bg-neutral-700'
+                                    }`}
+                                />
+
+                                <h3 className="font-heading text-[17px] font-semibold tracking-tight text-white md:text-[21px]">
+                                    {titulo}
+                                </h3>
+
+                                <p className="font-display mt-1.5 text-[15px] leading-relaxed text-neutral-400 md:text-[17px]">
+                                    {nivel} en el {CENTRO}
+                                </p>
+
+                                <p className="font-display mt-1 text-[15px] leading-relaxed text-neutral-500 text-pretty md:text-[17px]">
+                                    {descripcion}
+                                </p>
+                            </div>
                         </li>
                     ))}
                 </ol>
 
                 {/* fuera de la cronología */}
-                <div className="mt-10 max-w-[560px] border-t border-white/10 pt-8 md:mt-12">
+                <div className="mt-10 max-w-[560px] border-t border-white/10 pt-8 md:mt-12 md:max-w-[740px]">
                     <h3 className="font-mono text-[10px] tracking-[0.18em] text-cyan-500 uppercase md:text-[15px] md:tracking-[0.22em]">
                         Idiomas
                     </h3>
