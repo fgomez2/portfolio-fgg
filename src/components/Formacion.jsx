@@ -2,6 +2,7 @@ import CabeceraSeccion from './CabeceraSeccion'
 
 const CENTRO = 'IES Virgen del Espino (Soria)'
 
+// del más nuevo al más antiguo
 const ciclos = [
     {
         titulo: 'Desarrollo de Aplicaciones Multiplataforma',
