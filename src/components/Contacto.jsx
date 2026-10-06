@@ -9,6 +9,9 @@ const CV = '/cv-fernando-gomez.pdf'
 
 const perfiles = redesSociales.filter(({ href }) => href.startsWith('http'))
 
+const baseBoton =
+    'font-heading flex h-11 items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-[18px] text-sm font-medium text-neutral-300 transition-colors hover:border-cyan-400/60 hover:text-cyan-400 focus-visible:border-cyan-400/60 focus-visible:text-cyan-400'
+
 export default function Contacto() {
     const [copiado, setCopiado] = useState(false)
 
@@ -53,40 +56,34 @@ export default function Contacto() {
                 </a>
 
                 <div className="mt-7 flex flex-wrap items-center gap-3 md:mt-9">
-                    <button
-                        type="button"
-                        onClick={copiarCorreo}
-                        className="font-heading flex h-11 items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-[18px] text-sm font-medium text-neutral-300 transition-colors hover:border-cyan-400/60 hover:text-cyan-400 focus-visible:border-cyan-400/60 focus-visible:text-cyan-400"
-                    >
+                    <button type="button" onClick={copiarCorreo} className={baseBoton}>
                         {copiado ? <CheckIcono /> : <CopiarIcono />}
                         <span aria-live="polite">
                             {copiado ? 'Copiado' : 'Copiar correo'}
                         </span>
                     </button>
 
-                    <a
-                        href={CV}
-                        download
-                        className="font-heading flex h-11 items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-[18px] text-sm font-medium text-neutral-300 transition-colors hover:border-cyan-400/60 hover:text-cyan-400 focus-visible:border-cyan-400/60 focus-visible:text-cyan-400"
-                    >
+                    <a href={CV} download className={baseBoton}>
                         <DescargarIcono />
                         Descargar CV
                     </a>
                 </div>
 
-                <p className="font-display mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px] text-neutral-400 md:mt-7 md:text-[17px]">
-                    {perfiles.map(({ label, href, usuario }) => (
+                <div className="mt-7 flex flex-wrap items-center gap-3">
+                    {perfiles.map(({ label, href, usuario, Icon }) => (
                         <a
                             key={label}
                             href={href}
                             target="_blank"
                             rel="noopener"
-                            className="underline decoration-white/20 underline-offset-4 transition-colors hover:text-cyan-400 hover:decoration-cyan-400/60 focus-visible:text-cyan-400 focus-visible:decoration-cyan-400/60"
+                            aria-label={usuario ? `${label}: ${usuario}` : label}
+                            className={baseBoton}
                         >
-                            {usuario ? `${label} ${usuario}` : label}
+                            <Icon className="h-[18px] w-[18px] shrink-0" />
+                            {usuario ?? label}
                         </a>
                     ))}
-                </p>
+                </div>
 
                 <p className="font-display mt-10 flex items-center gap-2.5 text-[15px] text-neutral-400 md:mt-12 md:text-[17px]">
                     <span

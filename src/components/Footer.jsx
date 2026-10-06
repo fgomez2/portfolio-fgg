@@ -17,10 +17,6 @@ export default function Footer() {
                     .
                 </span>
                 </a>
-
-                <p className="font-display mt-3 text-sm text-neutral-400">
-                Desarrollador Full Stack Junior
-                </p>
             </div>
 
             <div className="-ml-2.5 flex items-center gap-1.5 md:ml-0">
