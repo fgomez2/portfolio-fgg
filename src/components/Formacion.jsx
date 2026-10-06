@@ -2,9 +2,6 @@ import CabeceraSeccion from './CabeceraSeccion'
 
 const CENTRO = 'IES Virgen del Espino (Soria)'
 
-// De lo más reciente a lo más antiguo, como en un CV.
-// BORRADOR: las descripciones son de los títulos oficiales; reescríbelas con
-// lo que de verdad hiciste en cada uno si quieres que suenen a ti.
 const ciclos = [
     {
         titulo: 'Desarrollo de Aplicaciones Multiplataforma',
