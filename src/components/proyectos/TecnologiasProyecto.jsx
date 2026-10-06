@@ -1,8 +1,25 @@
-import { ApiIcono, ReactIcono, SupabaseIcono } from '../icons'
+import {
+    ApiIcono,
+    DockerIcono,
+    PostgreSQLIcono,
+    ReactIcono,
+    SpringIcono,
+    SupabaseIcono,
+} from '../icons'
 
 const iconos = {
     React: ReactIcono,
     Supabase: SupabaseIcono,
+    'Spring Boot': SpringIcono,
+    PostgreSQL: PostgreSQLIcono,
+    Docker: DockerIcono,
+}
+
+const columnas = {
+    1: 'md:grid-cols-1',
+    2: 'md:grid-cols-2',
+    3: 'md:grid-cols-3',
+    4: 'md:grid-cols-4',
 }
 
 export default function TecnologiasProyecto({ tecnologias }) {
@@ -14,7 +31,11 @@ export default function TecnologiasProyecto({ tecnologias }) {
                 Tecnologías
             </h2>
 
-            <ul className="mt-5 grid gap-3 md:mt-6 md:grid-cols-3 md:gap-4">
+            <ul
+                className={`mt-5 grid gap-3 md:mt-6 md:gap-4 ${
+                    columnas[tecnologias.length] ?? 'md:grid-cols-4'
+                }`}
+            >
                 {tecnologias.map((tecnologia) => {
                     const Icono = iconos[tecnologia] ?? ApiIcono
 

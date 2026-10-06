@@ -23,7 +23,8 @@ export default function DetalleProyecto() {
         }
     }, [proyecto])
 
-    const { titulo, imagen, repositorio, web, resumen, descripcion, tecnologias } = proyecto
+    const { titulo, imagen, repositorio, web, enConstruccion, resumen, descripcion, tecnologias } =
+        proyecto
 
     return (
         <>
@@ -53,6 +54,17 @@ export default function DetalleProyecto() {
                             height="675"
                             className="mt-10 aspect-video w-full max-w-[880px] rounded-2xl border border-white/10 bg-black object-contain md:mt-12"
                         />
+
+                        {/* centrado respecto a la imagen */}
+                        {enConstruccion && (
+                            <div className="flex max-w-[880px] justify-center">
+                                <p className="font-display mt-4 inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-5 py-2.5 text-[11px] tracking-[0.18em] text-neutral-300 uppercase md:text-[15px] md:tracking-[0.22em]">
+                                    <span aria-hidden="true">🚧</span>
+                                    En construcción
+                                    <span aria-hidden="true">🚧</span>
+                                </p>
+                            </div>
+                        )}
 
                         {descripcion.map((parrafo) => (
                             <p

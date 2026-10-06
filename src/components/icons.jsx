@@ -107,6 +107,37 @@ export function SupabaseIcono({ className = 'h-6 w-6' }) {
     )
 }
 
+export function SpringIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z" />
+            <path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12" />
+        </svg>
+    )
+}
+
+export function PostgreSQLIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+            <path d="M3 12a9 3 0 0 0 18 0" />
+        </svg>
+    )
+}
+
+export function DockerIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.4" className={className} aria-hidden="true">
+            <rect x="2.5" y="11" width="4" height="4" rx="0.4" />
+            <rect x="7.5" y="11" width="4" height="4" rx="0.4" />
+            <rect x="12.5" y="11" width="4" height="4" rx="0.4" />
+            <rect x="7.5" y="6.5" width="4" height="4" rx="0.4" />
+            <path d="M2 16.5c1.8 1.7 4.6 2.5 8 2.5 5.3 0 8.8-2.4 10.5-6.5" />
+        </svg>
+    )
+}
+
 // Genérico para API
 export function ApiIcono({ className = 'h-6 w-6' }) {
     return (
