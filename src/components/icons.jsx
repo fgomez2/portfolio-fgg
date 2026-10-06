@@ -116,7 +116,7 @@ export function SpringIcono({ className = 'h-6 w-6' }) {
     )
 }
 
-export function PostgreSQLIcono({ className = 'h-6 w-6' }) {
+export function BaseDatosIcono({ className = 'h-6 w-6' }) {
     return (
         <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
             <ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -156,6 +156,80 @@ export function WebIcono({ className = 'h-4 w-4' }) {
             <circle cx="12" cy="12" r="10" />
             <path d="M2 12h20" />
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </svg>
+    )
+}
+
+// Iconos de las categorías de la sección Tecnologías
+export function CodigoIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.6" className={className} aria-hidden="true">
+            <path d="m8 17-5-5 5-5" />
+            <path d="m16 7 5 5-5 5" />
+            <path d="m13.5 4-3 16" />
+        </svg>
+    )
+}
+
+export function ServidorIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <rect x="2.5" y="3" width="19" height="7" rx="2" />
+            <rect x="2.5" y="14" width="19" height="7" rx="2" />
+            <path d="M6.5 6.5h.01" />
+            <path d="M6.5 17.5h.01" />
+        </svg>
+    )
+}
+
+export function MartilloIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <rect x="3.5" y="3.5" width="17" height="5.5" rx="1.5" />
+            <path d="M10.25 9v9.5a1.75 1.75 0 0 0 3.5 0V9" />
+        </svg>
+    )
+}
+
+export function IaIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <rect x="2.5" y="4" width="19" height="16" rx="3.5" />
+            <text
+                x="12"
+                y="12.4"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                stroke="none"
+                fill="currentColor"
+                fontSize="9"
+                fontWeight="700"
+                letterSpacing="0.3"
+                fontFamily="Sora, ui-sans-serif, system-ui, sans-serif"
+            >
+                IA
+            </text>
+        </svg>
+    )
+}
+
+export function MovilIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <rect x="6" y="2" width="12" height="20" rx="2.5" />
+            <path d="M11 18.5h2" />
+        </svg>
+    )
+}
+
+export function RedIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <rect x="8.5" y="2.5" width="7" height="7" rx="1.5" />
+            <rect x="1.5" y="14.5" width="7" height="7" rx="1.5" />
+            <rect x="15.5" y="14.5" width="7" height="7" rx="1.5" />
+            <path d="M12 9.5v3" />
+            <path d="M5 14.5v-2h14v2" />
         </svg>
     )
 }

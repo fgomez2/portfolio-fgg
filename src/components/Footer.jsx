@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-10 border-t border-white/6 pt-6">
-            <p className="font-mono text-[11px] tracking-[0.12em] text-neutral-400 uppercase">
+            <p className="font-mono text-[13px] tracking-[0.12em] text-neutral-400 uppercase">
                 © {anio} Fernando Gómez
             </p>
             </div>

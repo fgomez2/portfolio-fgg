@@ -1,7 +1,7 @@
 import {
     ApiIcono,
+    BaseDatosIcono,
     DockerIcono,
-    PostgreSQLIcono,
     ReactIcono,
     SpringIcono,
     SupabaseIcono,
@@ -11,7 +11,7 @@ const iconos = {
     React: ReactIcono,
     Supabase: SupabaseIcono,
     'Spring Boot': SpringIcono,
-    PostgreSQL: PostgreSQLIcono,
+    PostgreSQL: BaseDatosIcono,
     Docker: DockerIcono,
 }
 
