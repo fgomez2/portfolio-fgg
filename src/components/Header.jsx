@@ -56,27 +56,17 @@ export default function Header() {
         }
     }, [abierto])
 
-    const etiquetaActiva = links.find((link) => link.id === activo)?.label ?? links[0].label
-
     return (
         <>
             <header className="fixed inset-x-0 top-[calc(env(safe-area-inset-top)+14px)] z-50 flex justify-center px-3.5 md:top-[calc(env(safe-area-inset-top)+20px)] md:px-6">
-                <div className="relative grid h-14 w-full max-w-6xl grid-cols-[1fr_auto_1fr] items-center overflow-hidden rounded-full border border-cyan-400/20 bg-black/70 pr-1.5 pl-[18px] shadow-[0_0_34px_-12px_rgb(34_211_238)] backdrop-blur-md md:flex md:h-16 md:justify-between md:pr-2.5 md:pl-[26px]">
+                <div className="relative flex h-14 w-full max-w-6xl items-center justify-between overflow-hidden rounded-full border border-cyan-400/20 bg-black/70 pr-1.5 pl-[18px] shadow-[0_0_34px_-12px_rgb(34_211_238)] backdrop-blur-md md:h-16 md:pr-2.5 md:pl-[26px]">
                     <a
                         href="#inicio"
-                        className="font-heading justify-self-start text-lg font-semibold tracking-tight text-white transition-colors hover:text-cyan-400 md:text-[19px]"
+                        className="font-heading text-lg font-semibold tracking-tight text-white transition-colors hover:text-cyan-400 md:text-[19px]"
                     >
                         fgg
                         <span className="text-cyan-400 [text-shadow:0_0_12px_rgb(34_211_238)]">.</span>
                     </a>
-
-                    {/* Sección actual — solo móvil, donde no caben los links */}
-                    <div className="flex h-[26px] items-center gap-[7px] justify-self-center rounded-full border border-white/8 bg-white/4 pr-[11px] pl-[9px] md:hidden">
-                        <span className="block h-[5px] w-[5px] animate-pulse rounded-full bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)]" />
-                        <span className="font-mono text-[10px] tracking-[0.14em] text-neutral-300 uppercase">
-                            {etiquetaActiva}
-                        </span>
-                    </div>
 
                     <nav className="hidden items-center gap-9 md:flex">
                         {links.map(({ id, label }) => (
@@ -113,7 +103,7 @@ export default function Header() {
                         aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
                         aria-expanded={abierto}
                         aria-controls="menu-movil"
-                        className="flex h-11 w-11 items-center justify-center justify-self-end rounded-full text-cyan-400 md:hidden"
+                        className="flex h-11 w-11 items-center justify-center rounded-full text-cyan-400 md:hidden"
                     >
                         <span className="relative block h-[11px] w-[18px]">
                             <span

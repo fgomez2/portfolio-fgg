@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useParams } from 'react-router'
+import { Navigate, useParams } from 'react-router'
 import HeaderProyectos from '../components/HeaderProyectos'
 import FondoRejilla from '../components/FondoRejilla'
 import TecnologiasProyecto from '../components/proyectos/TecnologiasProyecto'
@@ -22,6 +22,11 @@ export default function DetalleProyecto() {
             document.title = tituloBase
         }
     }, [proyecto])
+
+    // Un slug que no existe (un enlace viejo, una errata) cae aquí, porque la
+    // ruta /proyectos/:slug acepta cualquier valor. Va después del efecto para
+    // no saltarse un hook entre renders.
+    if (!proyecto) return <Navigate to="/" replace />
 
     const { titulo, imagen, repositorio, web, enConstruccion, resumen, descripcion, tecnologias } =
         proyecto

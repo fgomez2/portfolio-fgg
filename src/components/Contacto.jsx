@@ -33,7 +33,7 @@ export default function Contacto() {
     }
 
     return (
-        <section id="contacto" className="relative flex min-h-svh items-center py-24 md:py-28">
+        <section id="contacto" className="relative flex min-h-svh items-center overflow-hidden py-24 md:py-28">
             <div
                 aria-hidden="true"
                 className="pointer-events-none absolute top-1/2 left-1/2 h-[380px] w-[520px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,rgb(34_211_238/0.10)_0%,transparent_70%)] md:h-[560px] md:w-[900px]"
