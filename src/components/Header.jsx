@@ -134,8 +134,10 @@ export default function Header() {
                 id="menu-movil"
                 aria-label="Navegación principal"
                 aria-hidden={!abierto}
-                className={`fixed inset-x-0 bottom-0 z-40 rounded-t-[28px] border-t border-cyan-400/28 bg-[#04080a]/95 px-[18px] pt-2.5 pb-[calc(env(safe-area-inset-bottom)+26px)] shadow-[0_-18px_80px_-26px_rgb(34_211_238)] backdrop-blur-lg transition-transform duration-[380ms] ease-[cubic-bezier(.32,.72,0,1)] md:hidden ${
-                    abierto ? 'translate-y-0' : 'translate-y-[105%]'
+                className={`fixed inset-x-0 bottom-0 z-40 rounded-t-[28px] border-t border-cyan-400/28 bg-[#04080a]/95 px-[18px] pt-2.5 pb-[calc(env(safe-area-inset-bottom)+26px)] backdrop-blur-lg transition-transform duration-[380ms] ease-[cubic-bezier(.32,.72,0,1)] md:hidden ${
+                    abierto
+                        ? 'translate-y-0 shadow-[0_-18px_80px_-26px_rgb(34_211_238)]'
+                        : 'translate-y-[105%]'
                 }`}
             >
                 <span
