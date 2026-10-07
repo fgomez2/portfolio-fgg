@@ -1,4 +1,5 @@
 import Contacto from '../components/Contacto'
+import Experiencia from '../components/Experiencia'
 import FondoRejilla from '../components/FondoRejilla'
 import Footer from '../components/Footer'
 import Formacion from '../components/Formacion'
@@ -17,6 +18,7 @@ export default function Inicio() {
                 <FondoRejilla>
                     <SobreMi />
                     <Formacion />
+                    <Experiencia />
                     <Proyectos />
 
                     <Tecnologias />

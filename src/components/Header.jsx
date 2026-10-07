@@ -6,10 +6,11 @@ const links = [
     { id: 'inicio', label: 'Inicio' },
     { id: 'sobre-mi', n: '01', label: 'Sobre mí' },
     { id: 'formacion', n: '02', label: 'Formación' },
-    { id: 'proyectos', n: '03', label: 'Proyectos' },
-    { id: 'tecnologias', n: '04', label: 'Tecnologías' },
-    { id: 'contacto', n: '05', label: 'Contacto' },
+    { id: 'experiencia', n: '03', label: 'Experiencia' },
+    { id: 'proyectos', n: '04', label: 'Proyectos' },
+    { id: 'tecnologias', n: '05', label: 'Tecnologías' },
 ]
+// Contacto no está en el menú: se llega por el botón, que es el destacado
 
 export default function Header() {
     const [abierto, setAbierto] = useState(false)
@@ -92,7 +93,7 @@ export default function Header() {
                             href="#contacto"
                             className="font-heading flex h-11 items-center gap-2.5 rounded-full border border-cyan-400/55 bg-cyan-400/8 px-[22px] text-sm font-medium text-cyan-400 transition-all duration-300 hover:bg-cyan-400/14 hover:shadow-[0_0_28px_-8px_rgb(34_211_238)]"
                         >
-                            Hablemos
+                            Contacto
                             <FlechaDerechaIcono className="h-[15px] w-[15px]" />
                         </a>
                     </div>
@@ -187,7 +188,7 @@ export default function Header() {
                     tabIndex={abierto ? undefined : -1}
                     className="font-heading mt-[18px] flex h-13 items-center justify-center gap-2.5 rounded-full border border-cyan-400/55 bg-cyan-400/9 text-[15px] font-medium text-cyan-400 shadow-[0_0_34px_-12px_rgb(34_211_238)] transition-colors hover:bg-cyan-400/14"
                 >
-                    Hablemos
+                    Contacto
                     <FlechaDerechaIcono />
                 </a>
 

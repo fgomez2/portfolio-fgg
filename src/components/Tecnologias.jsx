@@ -24,7 +24,7 @@ export default function Tecnologias() {
     return (
         <section id="tecnologias" className="flex min-h-svh items-center py-24 md:py-28">
             <div className="mx-auto w-full max-w-6xl px-6">
-                <CabeceraSeccion numero="04" titulo="Tecnologías" />
+                <CabeceraSeccion numero="05" titulo="Tecnologías" />
 
                 <div className="mt-10 grid gap-6 px-5 md:mt-14 md:grid-cols-3 md:gap-7 md:px-0">
                     {categorias.map(({ id, titulo, icono, items }) => {

@@ -40,7 +40,7 @@ export default function Contacto() {
             />
 
             <div className="relative mx-auto w-full max-w-6xl px-6">
-                <CabeceraSeccion numero="05" titulo="Contacto" />
+                <CabeceraSeccion numero="06" titulo="Contacto" />
 
                 <p className="font-display mt-6 max-w-[560px] text-[15px] leading-relaxed text-neutral-300 text-pretty md:mt-8 md:text-[19px]">
                     Busco prácticas como desarrollador Full Stack. Si tienes una
