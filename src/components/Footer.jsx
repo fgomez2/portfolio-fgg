@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-[34px] border-t border-white/6 pt-[20px] md:mt-10 md:pt-6">
-            <p className="font-mono text-[13px] tracking-[0.12em] text-neutral-400 uppercase md:text-[13px]">
+            <p className="font-display text-[13px] tracking-[0.12em] text-neutral-400 uppercase md:text-[13px]">
                 © {anio} Fernando Gómez
             </p>
             </div>
