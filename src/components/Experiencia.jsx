@@ -3,17 +3,19 @@ import CabeceraSeccion from './CabeceraSeccion'
 const experiencias = [
     {
         puesto: 'Desarrollador Full Stack en prácticas',
-        empresa: 'Solarig Global Services S.A',
+        empresa: 'Solarig Global Services S.A.',
         lugar: 'Soria, presencial',
         periodo: 'Sept. – Dec. 2025',
         masNuevo: true,
         descripcion:
-            'Falta por rellenaaar.',
+            'Prácticas como desarrollador full stack, con foco en el mantenimiento de la intranet corporativa y en aplicaciones internas con Laravel y el ecosistema Microsoft 365.',
         logros: [
-            'Rehíce...',
-            'Monté...',
-            'Unifiqué...',
-            'Soy...',
+            'Mantuve y evolucioné la intranet de la empresa, corrigiendo incidencias y añadiendo funcionalidades.',
+            'Desarrollé aplicaciones web internas con Laravel y Blade.',
+            "Creé tablas y estructuras de base de datos MariaDB desde Laravel (arquitectura MVC), lanzando las migraciones para generarlas.",
+            'Automaticé flujos de trabajo con Power Automate.',
+            'Integré aplicaciones internas con herramientas empresariales mediante APIs REST.',
+            'Trabajé con Git (ramas, merge requests, ...) y documenté técnicamente aplicaciones y flujos.'
         ],
     },
     {
@@ -22,12 +24,11 @@ const experiencias = [
         lugar: 'Campochiaro (Italia), presencial',
         periodo: 'Mar. – Jun. 2022',
         descripcion:
-            'Falta por rellenaaar.',
+            'Prácticas técnicas en una empresa de productos RFID, trabajando con hardware y equipos informáticos.',
         logros: [
-            'Rehíce...',
-            'Sustituí...',
-            'Optimicé...',
-            'Documenté...',
+            'Preparé y monté equipos informáticos, encargándome también de su mantenimiento.',
+            'Ensamblé dispositivos RFID, incluyendo el soldado de componentes pequeños.',
+            'Revisé el hardware de los dispositivos antes de su uso.',
         ],
     },
 ]
@@ -73,7 +74,7 @@ export default function Experiencia() {
                                         {puesto}
                                     </h3>
 
-                                    <p className="font-display mt-1.5 text-[15px] leading-relaxed text-neutral-400 md:text-[17px]">
+                                    <p className="font-display mt-1.5 text-[15px] leading-relaxed text-neutral-200 md:text-[17px]">
                                         {empresa} · {lugar}
                                     </p>
 

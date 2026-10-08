@@ -31,7 +31,7 @@ export default function Hero() {
                         Desarrollador Full Stack Junior
                     </p>
                     <p className="font-display mt-1.5 max-w-[300px] text-[15px] leading-relaxed text-neutral-500 text-pretty md:mt-2 md:max-w-[560px] md:text-[19px]">
-                        zzz... aquí irá una descripcion
+                        Con experiencia profesional en desarrollo y hardware, busco unas prácticas en el extranjero donde aportar lo que sé y seguir creciendo en un equipo.
                     </p>
                 </div>
 
