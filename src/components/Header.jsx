@@ -82,7 +82,8 @@ export default function Header() {
                                 {activo === id && (
                                     <span className="block h-[5px] w-[5px] rounded-full bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)]" />
                                 )}
-                                {label}
+                                
+                                <span>{label}</span>
                                 <span className="absolute -bottom-[7px] left-0 h-px w-0 bg-cyan-400 shadow-[0_0_8px_rgb(34_211_238)] transition-all duration-300 group-hover:w-full" />
                             </a>
                         ))}

@@ -25,7 +25,8 @@ const ciclos = [
     },
 ]
 
-const idiomas = [{ titulo: 'Inglés B2', detalle: 'Certificado por Cambridge' }]
+const idiomas = [
+    { titulo: 'Inglés B2', detalle: 'Certificado por Cambridge, preparándome para obtener el C1' }]
 
 export default function Formacion() {
     return (
