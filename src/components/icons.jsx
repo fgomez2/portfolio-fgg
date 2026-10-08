@@ -15,6 +15,15 @@ export function FlechaDerechaIcono({ className = 'h-4 w-4' }) {
     )
 }
 
+export function FlechaAbajoIcono({ className = 'h-4 w-4' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.6" className={className} aria-hidden="true">
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+        </svg>
+    )
+}
+
 export function FlechaIzquierdaIcono({ className = 'h-4 w-4' }) {
     return (
         <svg {...baseIcono} strokeWidth="1.6" className={className} aria-hidden="true">
@@ -112,6 +121,47 @@ export function SpringIcono({ className = 'h-6 w-6' }) {
         <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
             <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z" />
             <path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12" />
+        </svg>
+    )
+}
+
+export function NodeIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.4" className={className} aria-hidden="true">
+            <path d="M12 2.4 20.6 7v10L12 21.6 3.4 17V7z" />
+            <path d="M9.4 15.4V8.6l5.2 6.8V8.6" />
+        </svg>
+    )
+}
+
+export function NextIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.4" className={className} aria-hidden="true">
+            <circle cx="12" cy="12" r="9.5" />
+            <path d="M8.8 16V8l7.4 9.6" />
+            <path d="M15.4 8v5.2" />
+        </svg>
+    )
+}
+
+export function TypeScriptIcono({ className = 'h-6 w-6' }) {
+    return (
+        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="3.5" />
+            <text
+                x="12"
+                y="12.8"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                stroke="none"
+                fill="currentColor"
+                fontSize="9"
+                fontWeight="700"
+                letterSpacing="0.3"
+                fontFamily="Sora, ui-sans-serif, system-ui, sans-serif"
+            >
+                TS
+            </text>
         </svg>
     )
 }

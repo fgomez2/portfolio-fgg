@@ -1,19 +1,4 @@
-import {
-    ApiIcono,
-    BaseDatosIcono,
-    DockerIcono,
-    ReactIcono,
-    SpringIcono,
-    SupabaseIcono,
-} from '../icons'
-
-const iconos = {
-    React: ReactIcono,
-    Supabase: SupabaseIcono,
-    'Spring Boot': SpringIcono,
-    PostgreSQL: BaseDatosIcono,
-    Docker: DockerIcono,
-}
+import { iconoDe } from '../iconosTecnologias'
 
 const columnas = {
     1: 'md:grid-cols-1',
@@ -37,7 +22,7 @@ export default function TecnologiasProyecto({ tecnologias }) {
                 }`}
             >
                 {tecnologias.map((tecnologia) => {
-                    const Icono = iconos[tecnologia] ?? ApiIcono
+                    const Icono = iconoDe(tecnologia)
 
                     return (
                         <li

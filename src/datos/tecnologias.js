@@ -1,3 +1,7 @@
+// tecnologías con las que más trabajo, de las que están en categorias
+export const stackPrincipal = ['React', 'Spring Boot', 'Node.js', 'PostgreSQL', 'Docker']
+
+export const aprendiendo = ['Next.js', 'TypeScript']
 
 // icono es una clave: el componente la traduce al icono que toca
 export const categorias = [

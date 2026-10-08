@@ -1,4 +1,10 @@
 import fotoPerfil from '../assets/foto_fgg.jpg'
+import { aprendiendo, stackPrincipal } from '../datos/tecnologias'
+import { iconoDe } from './iconosTecnologias'
+import { FlechaAbajoIcono } from './icons'
+
+const baseTarjeta =
+    'flex w-[92px] flex-col items-center justify-center gap-2 rounded-xl border px-2 py-3 text-center md:w-[104px]'
 
 export default function Hero() {
     return (
@@ -33,13 +39,67 @@ export default function Hero() {
                     <p className="font-display mt-1.5 max-w-[300px] text-[15px] leading-relaxed text-neutral-500 text-pretty md:mt-2 md:max-w-[560px] md:text-[19px]">
                         Con experiencia profesional en desarrollo y hardware, busco unas prácticas en el extranjero donde aportar lo que sé y seguir creciendo en un equipo.
                     </p>
+
+                    <a
+                        href="#sobre-mi"
+                        className="font-heading mt-7 inline-flex h-11 items-center gap-2.5 rounded-full border border-cyan-400/55 bg-cyan-400/8 px-[22px] text-sm font-medium text-cyan-400 transition-all duration-300 hover:bg-cyan-400/14 hover:shadow-[0_0_28px_-8px_rgb(34_211_238)] md:mt-9"
+                    >
+                        Conoce más sobre mí
+                        <FlechaAbajoIcono className="h-[15px] w-[15px]" />
+                    </a>
                 </div>
 
-                <img
-                    src={fotoPerfil}
-                    alt="Fer Gómez, Desarrollador Full Stack"
-                    className="mt-8 mx-auto md:mx-0 h-[132px] w-[132px] shrink-0 rounded-full border border-cyan-400/30 object-cover object-[center_12%] shadow-[0_0_34px_-12px_rgb(34_211_238)] md:mt-0 md:mr-[10%] md:h-[280px] md:w-[280px] md:shadow-[0_0_70px_-20px_rgb(34_211_238)]"
-                />
+                <div className="mt-8 flex shrink-0 flex-col items-center md:relative md:top-[77px] md:mt-0 md:mr-[10%]">
+                    <img
+                        src={fotoPerfil}
+                        alt="Fer Gómez, Desarrollador Full Stack"
+                        className="h-[132px] w-[132px] rounded-full border border-cyan-400/30 object-cover object-[center_12%] shadow-[0_0_34px_-12px_rgb(34_211_238)] md:h-[280px] md:w-[280px] md:shadow-[0_0_70px_-20px_rgb(34_211_238)]"
+                    />
+
+                    <div className="mt-7 w-full max-w-[300px] md:mt-9 md:max-w-[340px]">
+                        <h2 className="font-display text-center text-[10px] tracking-[0.18em] text-neutral-400 uppercase md:text-[13px] md:tracking-[0.12em]">
+                            Stack
+                        </h2>
+                        <ul className="mt-3.5 flex flex-wrap justify-center gap-2.5">
+                            {stackPrincipal.map((tecnologia) => {
+                                const Icono = iconoDe(tecnologia)
+
+                                return (
+                                    <li
+                                        key={tecnologia}
+                                        className={`${baseTarjeta} border-white/10 bg-white/5`}
+                                    >
+                                        <Icono className="h-5 w-5 text-cyan-400" />
+                                        <span className="font-heading text-[12px] font-medium text-neutral-200 md:text-[13px]">
+                                            {tecnologia}
+                                        </span>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+
+                        <h2 className="font-display mt-6 text-center text-[10px] tracking-[0.18em] text-neutral-400 uppercase md:text-[13px] md:tracking-[0.12em]">
+                            Aprendiendo
+                        </h2>
+                        <ul className="mt-3.5 flex flex-wrap justify-center gap-2.5">
+                            {aprendiendo.map((tecnologia) => {
+                                const Icono = iconoDe(tecnologia)
+
+                                return (
+                                    <li
+                                        key={tecnologia}
+                                        className={`${baseTarjeta} border-cyan-400/30 bg-cyan-400/8`}
+                                    >
+                                        <Icono className="h-5 w-5 text-cyan-400" />
+                                        <span className="font-heading text-[12px] font-medium text-cyan-100 md:text-[13px]">
+                                            {tecnologia}
+                                        </span>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     )
