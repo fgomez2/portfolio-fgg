@@ -34,3 +34,6 @@ skills-lock.json
 
 # Imágenes que no quiero que se suban
 .dontUpload
+
+#
+.env
