@@ -6,7 +6,6 @@ import {
     IaIcono,
     MartilloIcono,
     MovilIcono,
-    RedIcono,
     ServidorIcono,
 } from './icons'
 
@@ -16,7 +15,6 @@ const iconos = {
     bbdd: BaseDatosIcono,
     movil: MovilIcono,
     herramientas: MartilloIcono,
-    red: RedIcono,
     ia: IaIcono,
 }
 

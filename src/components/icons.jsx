@@ -271,15 +271,3 @@ export function MovilIcono({ className = 'h-6 w-6' }) {
         </svg>
     )
 }
-
-export function RedIcono({ className = 'h-6 w-6' }) {
-    return (
-        <svg {...baseIcono} strokeWidth="1.5" className={className} aria-hidden="true">
-            <rect x="8.5" y="2.5" width="7" height="7" rx="1.5" />
-            <rect x="1.5" y="14.5" width="7" height="7" rx="1.5" />
-            <rect x="15.5" y="14.5" width="7" height="7" rx="1.5" />
-            <path d="M12 9.5v3" />
-            <path d="M5 14.5v-2h14v2" />
-        </svg>
-    )
-}

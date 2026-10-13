@@ -6,5 +6,5 @@ import { GitHubIcono, LinkedInIcono, CorreoIcono } from './components/icons'
 export const redesSociales = [
     { label: 'GitHub', href: 'https://github.com/fgomez2', usuario: '@fgomez2', Icon: GitHubIcono },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/fernandogomgar', usuario: 'linkedin.com/in/fernandogomgar', Icon: LinkedInIcono },
-    { label: 'Correo', href: '#contacto', Icon: CorreoIcono },
+    { label: 'Correo', href: '/#contacto', Icon: CorreoIcono },
 ]

@@ -1,4 +1,6 @@
 import CabeceraSeccion from './CabeceraSeccion'
+import Cronologia from './Cronologia'
+import HitoCronologia from './HitoCronologia'
 
 const experiencias = [
     {
@@ -12,10 +14,10 @@ const experiencias = [
         logros: [
             'Mantuve y evolucioné la intranet de la empresa, corrigiendo incidencias y añadiendo funcionalidades.',
             'Desarrollé aplicaciones web internas con Laravel y Blade.',
-            "Creé tablas y estructuras de base de datos MariaDB desde Laravel (arquitectura MVC), lanzando las migraciones para generarlas.",
+            'Creé tablas y estructuras de base de datos MariaDB desde Laravel (arquitectura MVC), lanzando las migraciones para generarlas.',
             'Automaticé flujos de trabajo con Power Automate.',
             'Integré aplicaciones internas con herramientas empresariales mediante APIs REST.',
-            'Trabajé con Git (ramas, merge requests, ...) y documenté técnicamente aplicaciones y flujos.'
+            'Trabajé con Git (ramas, merge requests, ...) y documenté técnicamente aplicaciones y flujos.',
         ],
     },
     {
@@ -39,68 +41,41 @@ export default function Experiencia() {
             <div className="mx-auto w-full max-w-6xl px-6">
                 <CabeceraSeccion numero="03" titulo="Experiencia" />
 
-                <ol className="relative mt-10 max-w-[560px] md:mt-14 md:max-w-[740px]">
-                    {/* hilo de la cronología */}
-                    <span
-                        aria-hidden="true"
-                        className="pointer-events-none absolute top-2.5 bottom-2.5 left-[3px] w-px bg-gradient-to-b from-cyan-400/50 via-white/12 to-transparent md:left-[145px]"
-                    />
-
+                <Cronologia>
                     {experiencias.map(
                         ({ puesto, empresa, lugar, periodo, masNuevo, descripcion, logros }) => (
-                            <li
+                            <HitoCronologia
                                 key={puesto}
-                                className="grid gap-x-8 pb-9 last:pb-0 md:grid-cols-[110px_1fr] md:pb-10"
+                                periodo={periodo}
+                                titulo={puesto}
+                                destacado={masNuevo}
                             >
-                                <p
-                                    className={`order-last mt-3 font-mono text-[12px] tracking-[0.18em] uppercase md:order-first md:mt-0 md:pt-[5px] md:text-[13px] md:leading-[1.5] md:tracking-[0.14em] ${
-                                        masNuevo ? 'text-cyan-400' : 'text-neutral-500'
-                                    }`}
-                                >
-                                    {periodo}
+                                <p className="font-display mt-1.5 text-[15px] leading-relaxed text-neutral-200 md:text-[17px]">
+                                    {empresa} · {lugar}
                                 </p>
 
-                                <div className="relative pl-7">
-                                    <span
-                                        aria-hidden="true"
-                                        className={`absolute top-2 left-0 block h-[7px] w-[7px] rounded-full ${
-                                            masNuevo
-                                                ? 'bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)]'
-                                                : 'bg-neutral-700'
-                                        }`}
-                                    />
+                                <p className="font-display mt-1 text-[15px] leading-relaxed text-neutral-500 text-pretty md:text-[17px]">
+                                    {descripcion}
+                                </p>
 
-                                    <h3 className="font-heading text-[17px] font-semibold tracking-tight text-white md:text-[21px]">
-                                        {puesto}
-                                    </h3>
-
-                                    <p className="font-display mt-1.5 text-[15px] leading-relaxed text-neutral-200 md:text-[17px]">
-                                        {empresa} · {lugar}
-                                    </p>
-
-                                    <p className="font-display mt-1 text-[15px] leading-relaxed text-neutral-500 text-pretty md:text-[17px]">
-                                        {descripcion}
-                                    </p>
-
-                                    <ul className="mt-3.5 space-y-2">
-                                        {logros.map((logro) => (
-                                            <li
-                                                key={logro}
-                                                className="font-display relative pl-[18px] text-[15px] leading-relaxed text-neutral-500 text-pretty md:text-[17px]"
-                                            >
-                                                <span
-                                                    aria-hidden="true"
-                                                    className="absolute top-[0.62em] left-0 block h-[3px] w-[3px] rounded-full bg-cyan-400/70"
-                                                />
-                                                {logro}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </li>
+                                <ul className="mt-3.5 space-y-2">
+                                    {logros.map((logro) => (
+                                        <li
+                                            key={logro}
+                                            className="font-display relative pl-[18px] text-[15px] leading-relaxed text-neutral-500 text-pretty md:text-[17px]"
+                                        >
+                                            <span
+                                                aria-hidden="true"
+                                                className="absolute top-[0.62em] left-0 block h-[3px] w-[3px] rounded-full bg-cyan-400/70"
+                                            />
+                                            {logro}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </HitoCronologia>
                         ),
                     )}
-                </ol>
+                </Cronologia>
             </div>
         </section>
     )

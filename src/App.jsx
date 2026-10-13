@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router'
-import './App.css'
 import ScrollArriba from './components/ScrollArriba'
 import DetalleProyecto from './paginas/DetalleProyecto'
 import Inicio from './paginas/Inicio'

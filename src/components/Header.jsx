@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
+import BarraSuperior from './BarraSuperior'
+import { botonPrimario } from './botones'
 import { FlechaDerechaIcono, FlechaDerechaPequenaIcono } from './icons'
+import Marca from './Marca'
 import { redesSociales } from '../redes'
 
 const links = [
@@ -16,7 +19,7 @@ export default function Header() {
     const [abierto, setAbierto] = useState(false)
     const [activo, setActivo] = useState(links[0].id)
 
-    // chip de la barra y marca en el menú
+    // resalta en el menú la sección que se está viendo
     useEffect(() => {
         const sections = links
             .map(({ id }) => document.getElementById(id))
@@ -59,69 +62,57 @@ export default function Header() {
 
     return (
         <>
-            <header className="fixed inset-x-0 top-[calc(env(safe-area-inset-top)+14px)] z-50 flex justify-center px-3.5 md:top-[calc(env(safe-area-inset-top)+20px)] md:px-6">
-                <div className="relative flex h-14 w-full max-w-6xl items-center justify-between overflow-hidden rounded-full border border-cyan-400/20 bg-black/70 pr-1.5 pl-[18px] shadow-[0_0_34px_-12px_rgb(34_211_238)] backdrop-blur-md md:h-16 md:pr-2.5 md:pl-[26px]">
-                    <a
-                        href="#inicio"
-                        className="font-heading text-lg font-semibold tracking-tight text-white transition-colors hover:text-cyan-400 md:text-[19px]"
-                    >
-                        fgg
-                        <span className="text-cyan-400 [text-shadow:0_0_12px_rgb(34_211_238)]">.</span>
-                    </a>
+            <BarraSuperior>
+                <Marca href="#inicio" />
 
-                    <nav className="hidden items-center gap-9 md:flex">
-                        {links.map(({ id, label }) => (
-                            <a
-                                key={id}
-                                href={`#${id}`}
-                                aria-current={activo === id ? 'true' : undefined}
-                                className={`font-heading group relative flex h-10 items-center gap-2 text-sm font-medium transition-colors hover:text-cyan-400 ${
-                                    activo === id ? 'text-white' : 'text-neutral-400'
-                                }`}
-                            >
-                                {activo === id && (
-                                    <span className="block h-[5px] w-[5px] rounded-full bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)]" />
-                                )}
-                                
-                                <span>{label}</span>
-                                <span className="absolute -bottom-[7px] left-0 h-px w-0 bg-cyan-400 shadow-[0_0_8px_rgb(34_211_238)] transition-all duration-300 group-hover:w-full" />
-                            </a>
-                        ))}
-                    </nav>
-
-                    <div className="hidden items-center gap-3.5 md:flex">
+                <nav className="hidden items-center gap-9 md:flex">
+                    {links.map(({ id, label }) => (
                         <a
-                            href="#contacto"
-                            className="font-heading flex h-11 items-center gap-2.5 rounded-full border border-cyan-400/55 bg-cyan-400/8 px-[22px] text-sm font-medium text-cyan-400 transition-all duration-300 hover:bg-cyan-400/14 hover:shadow-[0_0_28px_-8px_rgb(34_211_238)]"
+                            key={id}
+                            href={`#${id}`}
+                            aria-current={activo === id ? 'true' : undefined}
+                            className={`font-heading group relative flex h-10 items-center gap-2 text-sm font-medium transition-colors hover:text-cyan-400 ${
+                                activo === id ? 'text-white' : 'text-neutral-400'
+                            }`}
                         >
-                            Contacto
-                            <FlechaDerechaIcono className="h-[15px] w-[15px]" />
+                            {activo === id && (
+                                <span className="block h-[5px] w-[5px] rounded-full bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)]" />
+                            )}
+                            <span>{label}</span>
+                            <span className="absolute -bottom-[7px] left-0 h-px w-0 bg-cyan-400 shadow-[0_0_8px_rgb(34_211_238)] transition-all duration-300 group-hover:w-full" />
                         </a>
-                    </div>
+                    ))}
+                </nav>
 
-                    <button
-                        type="button"
-                        onClick={() => setAbierto(!abierto)}
-                        aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
-                        aria-expanded={abierto}
-                        aria-controls="menu-movil"
-                        className="flex h-11 w-11 items-center justify-center rounded-full text-cyan-400 md:hidden"
-                    >
-                        <span className="relative block h-[11px] w-[18px]">
-                            <span
-                                className={`absolute top-0 left-0 block h-[1.5px] w-[18px] rounded-full bg-current transition-transform duration-300 ${
-                                    abierto ? 'translate-y-[4.75px] rotate-45' : ''
-                                }`}
-                            />
-                            <span
-                                className={`absolute bottom-0 left-0 block h-[1.5px] rounded-full bg-current transition-all duration-300 ${
-                                    abierto ? 'w-[18px] -translate-y-[4.75px] -rotate-45' : 'w-[13px]'
-                                }`}
-                            />
-                        </span>
-                    </button>
+                <div className="hidden items-center gap-3.5 md:flex">
+                    <a href="#contacto" className={`${botonPrimario} flex h-11 px-[22px]`}>
+                        Contacto
+                        <FlechaDerechaIcono className="h-[15px] w-[15px]" />
+                    </a>
                 </div>
-            </header>
+
+                <button
+                    type="button"
+                    onClick={() => setAbierto(!abierto)}
+                    aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
+                    aria-expanded={abierto}
+                    aria-controls="menu-movil"
+                    className="flex h-11 w-11 items-center justify-center rounded-full text-cyan-400 md:hidden"
+                >
+                    <span className="relative block h-[11px] w-[18px]">
+                        <span
+                            className={`absolute top-0 left-0 block h-[1.5px] w-[18px] rounded-full bg-current transition-transform duration-300 ${
+                                abierto ? 'translate-y-[4.75px] rotate-45' : ''
+                            }`}
+                        />
+                        <span
+                            className={`absolute bottom-0 left-0 block h-[1.5px] rounded-full bg-current transition-all duration-300 ${
+                                abierto ? 'w-[18px] -translate-y-[4.75px] -rotate-45' : 'w-[13px]'
+                            }`}
+                        />
+                    </span>
+                </button>
+            </BarraSuperior>
 
             {/* Fondo oscurecido de la hoja — solo móvil */}
             <div
@@ -199,6 +190,7 @@ export default function Header() {
                             key={label}
                             href={href}
                             aria-label={label}
+                            onClick={() => setAbierto(false)}
                             tabIndex={abierto ? undefined : -1}
                             className="flex h-11 w-11 items-center justify-center rounded-full text-neutral-500 transition-colors hover:text-cyan-400"
                         >

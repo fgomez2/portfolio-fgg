@@ -1,12 +1,8 @@
 @import "tailwindcss";
 
-/* Space Grotesk — titular y texto del Hero */
 @import "@fontsource/space-grotesk/400.css";
-@import "@fontsource/space-grotesk/500.css";
 @import "@fontsource/space-grotesk/600.css";
-@import "@fontsource/space-grotesk/700.css";
 
-/* Sora — marca y navegación del Header */
 @import "@fontsource/sora/500.css";
 @import "@fontsource/sora/600.css";
 @import "@fontsource/sora/700.css";

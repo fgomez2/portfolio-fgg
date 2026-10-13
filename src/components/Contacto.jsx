@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import CabeceraSeccion from './CabeceraSeccion'
 import { redesSociales } from '../redes'
+import { botonSecundario } from './botones'
 import { CheckIcono, CopiarIcono, DescargarIcono } from './icons'
 
 const CORREO = 'fgomezdev2@gmail.com'
@@ -9,8 +10,7 @@ const CV = '/cv-fernando-gomez.pdf'
 
 const perfiles = redesSociales.filter(({ href }) => href.startsWith('http'))
 
-const baseBoton =
-    'font-heading flex h-11 items-center gap-2.5 rounded-full border border-white/12 bg-white/5 px-[18px] text-sm font-medium text-neutral-300 transition-colors hover:border-cyan-400/60 hover:text-cyan-400 focus-visible:border-cyan-400/60 focus-visible:text-cyan-400'
+const baseBoton = `${botonSecundario} flex h-11 px-[18px]`
 
 export default function Contacto() {
     const [copiado, setCopiado] = useState(false)

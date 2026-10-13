@@ -1,5 +1,7 @@
 import fotoPerfil from '../assets/foto_fgg.jpg'
 import { aprendiendo, stackPrincipal } from '../datos/tecnologias'
+import { botonPrimario } from './botones'
+import Etiqueta from './Etiqueta'
 import { iconoDe } from './iconosTecnologias'
 import { FlechaAbajoIcono } from './icons'
 
@@ -20,12 +22,7 @@ export default function Hero() {
 
             <div className="relative mx-auto w-full max-w-6xl px-6 md:flex md:items-center md:justify-between md:gap-14">
                 <div>
-                    <div className="flex items-center gap-2.5 md:gap-3">
-                        <span className="block h-px w-7 bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)] md:w-10" />
-                        <span className="font-mono text-[10px] tracking-[0.18em] text-cyan-400 uppercase md:text-[11px] md:tracking-[0.22em]">
-                            Portfolio
-                        </span>
-                    </div>
+                    <Etiqueta>Portfolio</Etiqueta>
 
                     <h1 className="mt-[18px] font-display text-[44px] leading-[1.05] font-semibold tracking-[-0.035em] text-white md:mt-6 md:text-[92px] md:leading-none md:tracking-[-0.04em]">
                         Fernando{' '}
@@ -42,7 +39,7 @@ export default function Hero() {
 
                     <a
                         href="#sobre-mi"
-                        className="font-heading mt-7 inline-flex h-11 items-center gap-2.5 rounded-full border border-cyan-400/55 bg-cyan-400/8 px-[22px] text-sm font-medium text-cyan-400 transition-all duration-300 hover:bg-cyan-400/14 hover:shadow-[0_0_28px_-8px_rgb(34_211_238)] md:mt-9"
+                        className={`${botonPrimario} mt-7 inline-flex h-11 px-[22px] md:mt-9`}
                     >
                         Conoce más sobre mí
                         <FlechaAbajoIcono className="h-[15px] w-[15px]" />
