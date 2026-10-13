@@ -5,7 +5,7 @@ const experiencias = [
         puesto: 'Desarrollador Full Stack en prácticas',
         empresa: 'Solarig Global Services S.A.',
         lugar: 'Soria, presencial',
-        periodo: 'Sept. – Dec. 2025',
+        periodo: 'Sept. – Dic. 2025',
         masNuevo: true,
         descripcion:
             'Prácticas como desarrollador full stack, con foco en el mantenimiento de la intranet corporativa y en aplicaciones internas con Laravel y el ecosistema Microsoft 365.',

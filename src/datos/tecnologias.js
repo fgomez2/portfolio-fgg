@@ -15,7 +15,7 @@ export const categorias = [
         id: 'backend',
         titulo: 'Backend',
         icono: 'servidor',
-        items: ['Java', 'Spring Boot', 'Node.js', 'PHP'],
+        items: ['Java', 'Spring Boot', 'Node.js', 'PHP', 'Laravel'],
     },
     {
         id: 'bbdd',
@@ -39,6 +39,6 @@ export const categorias = [
         id: 'ia',
         titulo: 'IA y automatizaciones',
         icono: 'ia',
-        items: ['Claude Code', 'Codex', 'n8n', 'API de Claude'],
+        items: ['Claude Code', 'Codex', 'n8n', 'API de Claude', 'Power Automate'],
     },
 ]
