@@ -6,9 +6,8 @@ Mi portfolio personal como desarrollador Full Stack Junior.<br />
 *My personal portfolio as a Junior Full Stack Developer.*
 
 ![React](https://img.shields.io/badge/React-19-22d3ee?style=for-the-badge&logo=react&logoColor=22d3ee&labelColor=0a0a0a)
-![Vite](https://img.shields.io/badge/Vite-8-22d3ee?style=for-the-badge&logo=vite&logoColor=22d3ee&labelColor=0a0a0a)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-22d3ee?style=for-the-badge&logo=tailwindcss&logoColor=22d3ee&labelColor=0a0a0a)
-![React Router](https://img.shields.io/badge/React_Router-8-22d3ee?style=for-the-badge&logo=reactrouter&logoColor=22d3ee&labelColor=0a0a0a)
+![Vite](https://img.shields.io/badge/Vite-0a0a0a?style=for-the-badge&logo=vite&logoColor=22d3ee)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0a0a0a?style=for-the-badge&logo=tailwindcss&logoColor=22d3ee)
 
 **[fgomez2.dev →](https://fgomez2.dev)**
 
@@ -19,7 +18,7 @@ Mi portfolio personal como desarrollador Full Stack Junior.<br />
 </div>
 
 <a id="espanol"></a>
-## 🇪🇸 Español
+## Español
 
 Una web de una sola página que reúne quién soy, mi formación, mi experiencia y
 mis proyectos. Cada proyecto tiene además su propia página de detalle.
@@ -55,7 +54,7 @@ public/             # Favicon, imagen para redes y capturas de proyectos
 ---
 
 <a id="english"></a>
-## 🇬🇧 English
+## English
 
 A single-page site that brings together who I am, my education, my experience
 and my projects. Each project also has its own detail page.
