@@ -42,8 +42,8 @@ export default function SobreMi() {
 
                         <p className="font-display mt-4 text-[15px] leading-relaxed text-neutral-400 text-pretty md:mt-5 md:text-[19px]">
                             Ya sé lo que es adaptarse a otro país, a otra forma de
-                            trabajar y a otro idioma, y tengo el B2 de Cambridge en
-                            inglés. Quiero un equipo en el que pueda aportar desde el
+                            trabajar y a otro idioma, y tengo el B2 en
+                            inglés certificado por Cambridge. Quiero un equipo en el que pueda aportar desde el
                             primer día y aprender de gente con más experiencia que yo.
                         </p>
                     </div>
