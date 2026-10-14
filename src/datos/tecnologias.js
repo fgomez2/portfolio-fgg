@@ -33,7 +33,7 @@ export const categorias = [
         id: 'herramientas',
         titulo: 'Herramientas',
         icono: 'herramientas',
-        items: ['Git', 'GitHub', 'Docker', 'Supabase', 'Firebase'],
+        items: ['Git', 'GitHub', 'Docker', 'pnpm', 'Supabase', 'Firebase'],
     },
     {
         id: 'ia',
