@@ -6,7 +6,7 @@ const datos = [
         etiqueta: 'Idiomas',
         valor: 'Español (nativo) · Inglés (B2 Cambridge, preparando el C1)',
     },
-    { etiqueta: 'Busco', valor: 'Prácticas en el extranjero' },
+    { etiqueta: 'Busco', valor: 'Prácticas en Europa' },
 ]
 
 export default function SobreMi() {

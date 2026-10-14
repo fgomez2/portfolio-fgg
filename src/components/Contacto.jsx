@@ -5,7 +5,7 @@ import { botonSecundario } from './botones'
 import { CheckIcono, CopiarIcono, DescargarIcono } from './icons'
 
 const CORREO = 'fgomezdev2@gmail.com'
-// TODO: dejar el PDF en public/ con este nombre, o el botón dará un 404.
+
 const CV = '/cv-fernando-gomez.pdf'
 
 const perfiles = redesSociales.filter(({ href }) => href.startsWith('http'))
@@ -84,14 +84,6 @@ export default function Contacto() {
                         </a>
                     ))}
                 </div>
-
-                <p className="font-display mt-10 flex items-center gap-2.5 text-[15px] text-neutral-400 md:mt-12 md:text-[17px]">
-                    <span
-                        aria-hidden="true"
-                        className="block h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400 shadow-[0_0_10px_-1px_rgb(34_211_238)]"
-                    />
-                    Buscando prácticas en España y Europa.
-                </p>
             </div>
         </section>
     )
